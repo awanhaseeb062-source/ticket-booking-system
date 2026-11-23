@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Booking System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h2>🎟️ TicketHub</h2>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#bookings">My Bookings</a>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <h1>Book Your Next Experience</h1>
+    <p>Discover exciting events and book tickets easily.</p>
+    <a href="#events" class="btn">Explore Events</a>
+</section>
+
+<section id="events" class="container">
+    <h2>Available Events</h2>
+    <div id="eventsGrid" class="event-grid">
+        Loading events...
+    </div>
+</section>
+
+<section id="bookings" class="container">
+    <h2>Booking Management</h2>
+    <div id="bookingsList"></div>
+</section>
+
+<div id="bookingModal" class="modal hidden">
+    <div class="modal-content">
+        <button id="closeModal" type="button">X</button>
+        <h2>Book Your Ticket</h2>
+
+        <form id="bookingForm">
+            <input type="text" id="customerName"
+                   placeholder="Full Name" required>
+
+            <input type="email" id="customerEmail"
+                   placeholder="Email Address" required>
+
+            <input type="tel" id="customerPhone"
+                   placeholder="Phone Number" required>
+
+            <select id="ticketSelect" required></select>
+
+            <input type="number" id="quantity"
+                   min="1" max="10" value="1" required>
+
+            <button type="submit" class="btn">
+                Confirm Booking
+            </button>
+        </form>
+    </div>
+</div>
+
+<div id="message"></div>
+
+<footer>
+    <p>© 2026 TicketHub | Ticket Booking System</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
